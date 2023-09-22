@@ -1,11 +1,11 @@
 'use client'
 
-import { useSelector, useDispatch } from 'react-redux'
 import { decrement, increment } from '../features/counter/counterSlice'
+import { useAppDispatch, useAppSelector } from './hooks'
 
 export const Counter = () => {
-    const count = useSelector((state: any) => state.counter.value)
-    const dispatch = useDispatch()
+    const count = useAppSelector((state) => state.counter.value)
+    const dispatch = useAppDispatch()
 
     return (
         <>
