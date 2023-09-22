@@ -1,5 +1,7 @@
 import Image from 'next/image'
 import styles from './page.module.css'
+import { Counter } from './Counter'
+import { App } from './App'
 
 export default function Home() {
   return (
@@ -28,16 +30,9 @@ export default function Home() {
         </div>
       </div>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+      <App>
+        <Counter />
+      </App>      
 
       <div className={styles.grid}>
         <a
